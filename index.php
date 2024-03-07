@@ -42,7 +42,7 @@ $Movie2 = new Movie('Shutter Island', 'thriller', 'https://m.media-amazon.com/im
     <div style="width: 100%; height: 10%" class="d-flex justify-content-around align-items-center">
         <div style="width: 20%;">
             <img style="width: 100%;" src="<?php echo $Movie1->image ?>" alt="">
-            <p class="pt-4"> Titolo: <?php echo $Movie2->nome ?> </p>
+            <p class="pt-4"> Titolo: <?php echo $Movie1->nome ?> </p>
             <p> Genere: <?php echo $Movie2->genere ?> </p>
     
         </div>
