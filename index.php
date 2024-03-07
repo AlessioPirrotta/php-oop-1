@@ -11,6 +11,14 @@ class Movie
         $this->genere = $_genere;
         $this->image = $_image;
     }
+
+    public function GetFilm(){
+       return "<div>
+                    <img style='width: 100%;' src='{$this->image}' alt=''>
+                    <p class='pt-4'> Titolo: {$this->nome} </p>
+                    <p> Genere: {$this->genere} </p>
+                </div>";
+    }
 }
 
 $Movie1 = new Movie('Harry Potter e il calice di fuoco', 'fantascienza', 'https://m.media-amazon.com/images/M/MV5BZGUyODc4ODQtYzY3MC00Y2YyLWEzNzgtYzc4NDFhMDdkMzI3XkEyXkFqcGdeQXVyMzU5ODEzMDU@._V1_FMjpg_UX1000_.jpg');
@@ -41,15 +49,13 @@ $Movie2 = new Movie('Shutter Island', 'thriller', 'https://m.media-amazon.com/im
 <body style="height: 100vh" class="p-5 pt-5 text-light d-flex align-items-center">
     <div style="width: 100%; height: 10%" class="d-flex justify-content-around align-items-center">
         <div style="width: 20%;">
-            <img style="width: 100%;" src="<?php echo $Movie1->image ?>" alt="">
-            <p class="pt-4"> Titolo: <?php echo $Movie1->nome ?> </p>
-            <p> Genere: <?php echo $Movie2->genere ?> </p>
-    
+        <?php echo $Movie1->GetFilm(); ?>
         </div>
         <div style="width: 20%;">
-            <img style="width: 100%;" src="<?php echo $Movie2->image ?>" alt="">
-            <p class="pt-4"> Titolo: <?php echo $Movie2->nome ?> </p>
-            <p> Genere: <?php echo $Movie2->genere ?> </p>
+        <div style="width: 100%; height: 10%" class="d-flex justify-content-around align-items-center">
+        <?php echo $Movie2->GetFilm(); ?>
+        
+    </div>
     
         </div>
 
